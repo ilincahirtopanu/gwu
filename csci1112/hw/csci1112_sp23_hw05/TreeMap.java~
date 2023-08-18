@@ -1,0 +1,185 @@
+/*
+  Alina Jalisi 
+TODO - Summarize this class
+*/
+
+// used only in balancing utilities
+import java.util.List;       
+import java.util.ArrayList;
+
+public class TreeMap implements Map {
+  
+    // TODO - Document all instance variables
+    private TreeNode root;
+    private boolean rebalance;
+
+    public TreeMap( boolean rebalance ) {
+        this.root = null;
+        this.rebalance = rebalance;
+    }
+
+    /// TODO - Document this method FINISH COMMENTS
+    public void set( String key, String value, int[] profile ) {
+        //TODO: write this method
+
+	//evaluate if the treemap is empty
+	if(root == null){
+	    //creates "root" as a new node in the treemap - assigning it a KVP
+	    root = new TreeNode (key,value);
+	}else{
+	    //if the map is not empty, it'll seach for the key - if the key already exists, it sets 
+	    set(key, value, root, profile);
+	}
+    }
+ 
+    // recursive search for insertion
+    //FINSIH COMMENTS 
+    // @param it root of subtree
+    private void set( String key, String value, TreeNode it, int[] profile ) {
+	//
+	if(key.equals(it.getKey())){
+	    //
+	    profile[0] +=1;
+	    //
+	    it.updateValue(value);
+	    balance();
+	}
+	//
+	else if(key.compareTo(it.getKey())<0){
+	    //
+	    profile[0] += 1;
+	    //
+	    if(it.left == null){
+		//
+		//
+		it.left = new TreeNode(key,value);
+	    }else{
+		//
+		set(key, value, it.left, profile);
+	    }
+	}
+	else{
+	    profile[0]+=1;
+	    //
+	    if(it.right == null){
+		//
+		it.right = new TreeNode(key,value);
+	    }
+	    else{
+		//
+		set(key, value, it.right, profile);
+	    }
+	}
+		        
+    }
+  
+  
+    /// TODO - Document this method FINISH COMMENTS 
+    public String get(String key, int[] profile) {
+      // TODO: write this method
+	//
+	if(root == null){
+	    return null;
+	}
+	//
+	return get(key, root, profile);
+    
+    }
+
+    // recursive search
+    //FINSIH COMMENTS 
+    // @param it root of subtree
+    private String get( String key, TreeNode it, int[] profile) {
+	//
+	if(it ==null){
+	    return null;
+	}
+	//
+	int compare = key.compareTo(it.getKey());
+	//
+	if(compare == 0){
+	    profile[0]+=1;
+	    //
+	    return it.getValue();
+	}
+	//
+	else if(compare<0){
+	    profile[0]+=1;
+	    //
+	    return get(key, it.left, profile);
+	}else{
+	    profile[0]+=1;
+	    //
+	    return get(key, it.right, profile);
+	}
+	
+
+    } 
+  
+    /// TODO - Document this method FINISH COMMENTS 
+    public void clear(){
+        // TODO: write this method
+        root = null;
+	//empties out entire treemap
+    }
+  
+  
+    //----------------------------------------------------------------------
+    // Utilities
+    //----------------------------------------------------------------------
+    /// The entry point for balancing this tree to maintain optimal insert 
+    /// and search efficiency
+    /// Note: This algorithm focuses on correctness and is not the most 
+    /// efficient algorithm available. Please look up different algorithms 
+    /// that solve the balancing problem.
+    private void balance() {
+        List<TreeNode> nodes = new ArrayList<TreeNode>();
+        //Sorts tree from given root
+        populate(root, nodes);
+        //Return null if root has no children
+        if(nodes.size() == 0) return;
+  
+        this.root = balance(nodes, 0, nodes.size() - 1);
+    }
+ 
+    /// Recursive helper in the balancing operation to support balance.
+    /// @param nodes a list of nodes
+    /// @param start the start index within the list
+    /// @param end the end index within the list
+    /// @return the local root after balancing is performed on the subtree
+    private TreeNode balance(List<TreeNode> nodes, int start, int end) {
+        int mid = (start + end) / 2;
+        TreeNode node = nodes.get(mid);
+        if(start == end){
+            node.left = null;
+            node.right = null;
+            return node;
+        }
+        //Recursively balance tree on left and right children using
+        //middle node as root
+        if(!(mid - 1 < start)) {
+            node.left = balance(nodes, start, mid - 1);
+        } else {
+            node.left = null;
+        }
+  
+        if(!(mid + 1 > end)) {
+            node.right = balance(nodes, mid + 1, end);
+        } else {
+            node.right = null;
+        }
+  
+        return node;
+    }
+ 
+    /// Recursive helper in the balancing operation to put listitems into
+    /// the tree
+    /// @param the root of the subtree to balance
+    /// @param the list of nodes to balance
+    private void populate(TreeNode node, List<TreeNode> list) {
+        if(node == null) return;
+        populate(node.left, list);
+        list.add(node);
+        populate(node.right, list);
+    }
+}

@@ -1,0 +1,100 @@
+CSCI,0001,Intro to Programming,07:30:00,09:30:00
+CSCI,0002,Intro to OOP,08:00:00,10:00:00
+CSCI,0003,ST: Quantum Computing,11:00:00,13:30:00
+CSCI,0004,Algorithms and Data Structures,11:11:00,12:34:00
+CSCI,0005,Intro to Software Engineering,09:12:00,10:00:00
+CSCI,0006,Operating Systems,12:00:00,16:11:00
+CSCI,0007,Computer Architecture,06:12:00,08:00:00
+CSCI,0008,ST: Neural Networks,18:00:00,21:00:00
+CSCI,0009,Intro to Internet Technology,14:03:00,16:23:00
+CSCI,0010,Web Development,07:25:00,08:14:00
+CSCI,0011,Discrete Structures,13:10:00,17:43:00
+CSCI,0012,Discrete Structures 2,14:20:00,19:30:00
+CSCI,0013,Database Systems,09:52:00,11:25:00
+CSCI,0014,Foundations of Computing,12:07:00,13:30:00
+CSCI,0015,Big Data and Analytics,10:26:00,12:21:00
+CSCI,0016,GameTheory in CS,13:37:00,16:20:00
+CSCI,0017,Intro to Cryptography,06:66:00,07:57:00
+CSCI,0018,Advanced Cryptography,05:50:00,08:00:00
+CSCI,0019,Augmented Reality,12:30:00,16:10:00
+CSCI,0020,Virtual Reality,16:10:00,18:00:00
+CSCI,0021,Data Management Systems,18:05:00,22:30:00
+CSCI,0022,Coding Interview Prep,04:00:00,05:12:00
+CSCI,0023,Computational Photography,10:38:00,12:44:00
+CSCI,0024,Usable Securtiy and Privacy,16:22:00,17:37:00
+CSCI,0025,Ehtics of Computer Science,07:44:00,13:20:00
+CSCI,0026,Building Trustworthy AI Systems,08:44:00,12:33:00
+CSCI,0027,Research,09:44:00,18:32:00
+CSCI,0028,Software Design for Handheld Devices,10:44:00,17:32:00
+CSCI,0029,Capstone Design Project,11:44:00,12:40:00
+CSCI,0030,Machine Learning,12:44:00,13:21:00
+CSCI,0031,Machine Learning,10:01:00,11:59:00
+CSCI,0032,Artificial Intelligence,07:56:00,09:41:00
+CSCI,0033,Computer Securtiy,09:55:00,11:41:00
+CSCI,0034,Network Securtiy,03:24:00,05:11:00
+CSCI,0035,Computer Graphics I,03:33:00,04:44:00
+CSCI,0036,Computer Graphics II,02:31:00,04:55:00
+CSCI,0037,Computer Animation,12:10:00,13:10:00
+CSCI,0038,Computer Science Fundamentals,03:54:00,08:23:00
+CSCI,0039,Advanced Software Paradigms,08:13:00,13:33:00
+CSCI,0040,Design and Analysis of Algorithms,13:34:00,15:44:00
+CSCI,0041,Advanced Operating Systems,12:00:00,15:41:00
+CSCI,0042,Information Retrieval Systems,13:02:00,15:42:00
+CSCI,0043,Computer System Architecture,14:21:00,15:43:00
+CSCI,0044,Advanced Topics in Artificial Intelligence,11:11:00,13:42:00
+CSCI,0045,Information Securtiy in Government,10:02:00,14:42:00
+CSCI,0046,Computer Network Defense,11:54:00,15:43:00
+CSCI,0047,ECommerce Security,14:59:00,15:24:00
+CSCI,0048,Design of Interactive Multimedia,16:53:00,17:42:00
+CSCI,0049,API Design and Implementation,17:44:00,19:42:00
+CSCI,0050,Computer Vision and Image Processing,15:55:00,18:42:00
+DATS,0051,Ethical Life in a Digital World,14:42:00,17:42:00
+DATS,0052,Intro to Data Science,10:22:00,12:34:00
+DATS,0053,Data Warehousing,15:20:00,17:21:00
+DATS,0054,Intro to Data Mining,12:21:00,13:31:00
+DATS,0055,High Performance Computing,14:41:00,15:51:00
+DATS,0056,Visualization of Complex Data,18:20:00,20:10:00
+DATS,0057,Cloud Computing,19:50:00,20:00:00
+DATS,0058,NLP for Data Science,20:00:00,23:01:00
+DATS,0059,Timeseries Modeling and Analysis,14:00:00,15:26:00
+DATS,0060,Machine Learning for Data Science,16:05:00,18:32:00
+MATH,0061,Advanced Calculus,08:23:00,12:00:00
+MATH,0062,Multivariable Calculus,11:55:00,13:00:00
+MATH,0063,Linear Algebra,14:25:00,16:35:00
+MATH,0064,Real Analysis,12:30:00,15:03:00
+MATH,0065,Graph Theory,00:69:00,04:20:00
+MATH,0066,General Topology,01:23:00,03:45:00
+MATH,0067,Knot Theory,11:23:00,14:56:00
+MATH,0068,Complex Analysis,07:30:00,09:10:00
+MATH,0069,Differential Equations,09:30:00,11:20:00
+MATH,0070,Calculus,09:45:00,11:30:00
+MUSC,0071,Jazz Ensemble,10:23:00,19:58:00
+MUSC,0072,Chamber Ensemble,20:12:00,21:48:00
+MUSC,0073,Orchestra,15:28:00,18:12:00
+MUSC,0074,Wind Ensemble,21:21:00,22:11:00
+MUSC,0075,Symphonic Band,11:28:00,16:38:00
+MUSC,0076,Piano I,09:00:00,10:30:00
+MUSC,0077,Piano II,09:00:00,11:05:00
+MUSC,0078,Music Composition,11:10:00,12:20:00
+MUSC,0079,Private Lesson,14:00:00,16:25:00
+MUSC,0080,Music History,12:23:00,13:32:00
+BISC,0081,Intro to Biology,16:05:00,18:30:00
+BISC,0082,Cell Biology,08:00:00,11:15:00
+BISC,0083,Biology of Cancer,12:35:00,14:44:00
+BISC,0084,Organic Evolution,12:39:00,15:52:00
+BISC,0085,Animal Behavior,12:32:00,12:54:00
+BISC,0086,Molecular Biology,17:41:00,19:00:00
+BISC,0087,MicroBiology,16:14:00,17:55:00
+BISC,0088,Genome Editing,08:44:00,10:55:00
+BISC,0089,Resoration Ecology,12:00:00,14:22:00
+BISC,0090,Nanobiotechnology,13:21:00,15:22:00
+CHEM,0091,General Chemistry,17:32:00,18:00:00
+CHEM,0092,Organic Chemistry,13:30:00,15:00:00
+CHEM,0093,Physical Chemistry,13:00:00,14:30:00
+CHEM,0094,Inorganic Chemistry,12:00:00,14:30:00
+CHEM,0095,Polymer Chemistry,14:00:00,16:15:00
+CHEM,0096,Biochemistry with Imaging Techniques,07:05:00,09:00:00
+CHEM,0097,Biomedical Mass Spectrometry,07:50:00,10:25:00
+CHEM,0098,Capstone Project,11:30:00,13:00:00
+CHEM,0099,Special Topics in Chemistry,11:30:00,14:00:00 
+CHEM,0100,Nuclear Chemistry,08:05:00,10:00:00

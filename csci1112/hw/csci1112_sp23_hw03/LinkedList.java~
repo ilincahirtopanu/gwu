@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------------------
+GWU - CS1112 Data Structures and Algorithms - Spring 2023
+
+TODO : Document this file
+
+authors: <TODO your name here>, Charles Peeke
+--------------------------------------------------------------------------*/
+public class LinkedList implements MusicCatalog {
+
+    /// For a linked-list based list, the head pointer
+    private CatalogItem head;
+    /// The counter to track the number of elements in the list 
+    private int count;
+
+    // Parameterless Constructor
+    public LinkedList() {
+        count = 0;
+        head = null;
+    }
+
+    /// TODO : Document this function
+    public void add(Song song) {
+        // TODO : Implement this function
+    }
+
+    /// TODO : Document this function
+    public Song remove() {
+        // TODO : Implement this function
+
+        return null;
+    }
+
+    /// TODO : Document this function
+    public Song remove(Song song) {
+        // TODO : Implement this function
+
+        return null;
+    }
+    
+    /// TODO : Document this function
+    public void clear() {
+        // TODO : Implement this function
+    }
+    
+    /// TODO : Document this function
+    public boolean isEmpty() {
+        // TODO : Implement this function
+
+        return false;
+    }
+    
+    /// TODO : Document this function
+    public int count() {
+        // TODO : Implement this function
+
+        return 0;
+    }
+    
+    /// TODO : Document this function
+    public Song get(int i) {
+        // TODO : Implement this function
+
+        return null;
+    }
+
+    /// TODO : Document this function
+    public boolean contains(Song song) {
+        // TODO : Implement this function
+
+        return false;
+    }
+
+    //--------------------------------------------------------------------
+    // Utilities
+    //--------------------------------------------------------------------
+
+    /// Returns a truth value indicating whether the catalog's structural
+    /// integrity remains valid.  If the integrity is no longer valid,
+    /// then the catalog should be invalidated and usage should not be trusted
+    /// @return true if the catalog integrity is valid; otherwise, false
+    public boolean isIntegrityValid() {
+        if(count < 0) {
+            System.out.println("1");
+            return false;
+        }
+        if(count == 0 && head == null) {
+            return true;
+        }
+        if(count == 1 && head != null && head.next == null) {
+            return true;
+        }
+
+        int n = 1;
+        CatalogItem it = head;
+        while(it.next != null) {
+            it = it.next;
+            n++;
+        }
+
+        if(n != count) {
+            System.out.println("2");
+            return false;
+        }
+
+        return true;
+    }
+
+    /// Returns a string that contains information about the list and the 
+    /// contents of the list.  This is mostly useful for visual debugging 
+    /// @return a string containing information about the contents of the 
+    ///         catalog
+    public String toString() {
+        String s = "";
+        s = "LinkedList::count=" + count(); 
+        s += ", isEmpty=" + isEmpty(); 
+        s += ", ["; 
+        CatalogItem it = head;
+        while(it != null) {
+            if(it != head) {
+                s += ", ";
+            }
+            s += it.getSong().getTitle();
+            s += " | ";
+            s += it.getSong().getYear();
+            it = it.next;
+        }
+        s += "]";
+
+        return s; 
+    }
+
+    /// Returns the earliest and most recent years of all the songs in the
+    /// catalog and then clears the catalog of all songs
+    /// @return an array of the years of the earliest and most recent songs
+    public int[] publish() {
+        int[] years = new int[2];
+        int oldYear = Integer.MAX_VALUE;
+        int newYear = Integer.MIN_VALUE;
+
+        CatalogItem it = head;
+        while(it != null) {
+            int curYear = it.getSong().getYear();
+            if (curYear < oldYear) {
+                oldYear = curYear;
+                years[0] = oldYear;
+            }
+            if (curYear > newYear) {
+                newYear = curYear;
+                years[1] = newYear;
+            }
+            it = it.next;
+        }
+        clear();
+        return years;
+    }
+
+}

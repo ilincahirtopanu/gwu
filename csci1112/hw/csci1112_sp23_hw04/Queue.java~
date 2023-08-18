@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------------------
+GWU CSCI 1112 Spring 2023
+author: Charles Peeke, <your name>
+
+TODO - Summarize this class
+
+--------------------------------------------------------------------------*/
+
+public class Queue {
+    // TODO:
+    private QueueElement front;
+    private QueueElement back;
+    private int count;
+
+    /// TODO:
+    public Queue() {
+        
+    }
+
+    /// TODO:
+    public void enqueue(Transaction t) {
+        
+    }
+
+    /// TODO:
+    public Transaction dequeue() {
+        return null;
+    }
+
+    /// TODO:
+    public boolean isEmpty() {
+        return false;
+    }
+
+    /// TODO:
+    public int size() {
+        return -1;
+    }
+
+    /// TODO:
+    @Override
+    public String toString() {
+        // TODO
+        String s = "";
+        QueueElement current = this.front;
+        while (current != null) {
+            s += current.value.toString() + ";";
+            current = current.next;
+        }
+        return s;
+    }
+
+}

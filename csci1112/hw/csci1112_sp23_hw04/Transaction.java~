@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------------------
+GWU CSCI 1112 Spring 2023
+author: Charles Peeke, <your name>
+
+TODO - Summarize this class
+
+--------------------------------------------------------------------------*/
+
+public class Transaction {
+    // TODO:
+    public int accountNumber;
+    private int operation;
+    private double amount;
+
+    /// TODO:
+    public Transaction(int acctNumber, int operation, String content) {
+        
+    }
+
+    /// TODO:
+    public int getAccountNumber() {
+        return -1;
+    }
+
+    /// TODO:
+    public int getOperation() {
+        return -1;
+    }
+
+    /// TODO:
+    public double getAmount() {
+        return -1;
+    }
+
+    /// TODO:
+    private int translateOldOperation(String content) {
+        
+        return -1;
+    }
+
+
+    /// TODO:
+    @Override
+    public String toString() {
+        String operationString = "";
+        if (this.operation == 0) {
+            operationString = "Create";
+        }
+        else if (this.operation == 1) {
+            operationString = "Deposit";
+        }
+        else if (this.operation == 2) {
+            operationString = "Withdraw";
+        }
+        else {
+            operationString = "Error";
+        }
+        return "Transaction [accountNumber=" + accountNumber + ", operation=" + operationString + ", amount=" + amount + "]";
+    }
+}

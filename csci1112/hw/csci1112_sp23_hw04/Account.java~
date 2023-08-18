@@ -1,0 +1,56 @@
+import java.text.DecimalFormat;
+/*--------------------------------------------------------------------------
+GWU CSCI 1112 Spring 2023
+author: Charles Peeke, <your name>
+
+TODO - Summarize this class
+
+--------------------------------------------------------------------------*/
+
+public class Account {
+    // TODO:
+    public String accountName;
+    public int accountNumber;
+    public double balance;
+
+    // TODO: 
+    public Account(String name) {
+        
+    }
+
+    // TODO:
+    private void assignAccountNumber() {
+        
+    }
+
+    // Getters and setters
+    public int getAccountNumber() {
+        return -1;
+    }
+
+    public double getBalance() {
+        return -1.0;
+    }
+
+    // Deposit and Withdraw Methods
+    // TODO: 
+    public void deposit(double amount) {
+
+    }
+
+    // TODO: 
+    public void withdraw(double amount) {
+
+    }
+
+    // TODO:
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("0.00");
+        String s = "";
+        s += "Account Name: " + this.accountName + " \t";
+        s += "Account Number: " + this.accountNumber + " \t";
+        s += "Balance: " + df.format(this.balance);
+        return s;
+    }
+}

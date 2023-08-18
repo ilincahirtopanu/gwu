@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------------------
+GWU CSCI 1112 Spring 2023
+author: Charles Peeke, <your name>
+
+TODO - Summarize this class
+
+--------------------------------------------------------------------------*/
+
+public class Bank {
+    // TODO:
+    public String bankName;
+    private Account[] accounts;
+    private Queue transactions;
+    private int count;
+    
+    /// TODO: 
+    public Bank(String name) {
+        
+    }
+
+    /// TODO:
+    public int createAccount(String name) {
+        return -1;
+    }
+
+    /// TODO:
+    public double closeAccount(int accountNumber) {
+        return -1;
+    }
+
+    /// TODO: 
+    public double getBalance(int accountNumber) {
+        return -1;
+    }
+
+    /// TODO:
+    public void deposit(int accountNumber, double amount) {
+        
+    }
+
+    /// TODO:
+    public void withdraw(int accountNumber, double amount) {
+        
+    }
+
+    // ----------------------------------------
+    // Transactions Methods
+    /// TODO:
+    public void addTransaction(Transaction t) {
+
+    }
+
+    /// TODO:
+    public void processTransaction() {
+        
+    }
+
+    /// TODO:
+    private void reallocateAccounts () {
+        
+    }
+
+    // ----------------------------------------
+    /// TODO:  
+    public String getBankName() {
+        return null;
+    }
+
+    public int getNumberOfAccounts() {
+        return -1;
+    }
+
+    public int getNumberOfTransactions() {
+        return -1;
+    }
+
+    // TODO:
+    @Override
+    public String toString() {
+        String s = "Bank Name: " + bankName + " \n";
+        s += "Number of Accounts: " + count + " | ";
+        s += "Number of Pending Transactions: " + transactions.size() + "\n";
+        s += "Accounts: \n";
+        for (int i = 0; i < count; i++) {
+            s += accounts[i].toString() + " \n";
+        }
+        return s;
+    }
+}
